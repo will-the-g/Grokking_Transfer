@@ -13,6 +13,7 @@
 /archive_final/
 /backup_*.tar
 /code.zip
+/consolidation_reuse_nseed_package.zip
 
 # the editor and the agent
 .omo/
