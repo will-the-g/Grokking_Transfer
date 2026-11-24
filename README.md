@@ -2,6 +2,8 @@
 
 **William Gatlin**
 
+**The paper**: <https://zenodo.org/records/24489609>
+
 The code and the results of the paper. The question is when a network that has
 grokked a task can be reused for another one. The answer of the paper is that
 the reuse follows the generalization of the source: a network that has grokked
@@ -79,6 +81,11 @@ python -m pytest tests/test_nseed.py -q
 The smoke test needs nothing but torch: it builds the small transformer, the
 data and the split, takes five steps and writes nothing outside a temporary
 folder. It never downloads a model.
+
+## The paper
+
+**Transfer Follows Generalization: Grokking Makes a Network a Useful Starting
+Point** — William Gatlin — <https://zenodo.org/records/24489609>
 
 ## The license
 

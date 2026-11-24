@@ -210,6 +210,6 @@ build:**
 | **the total** | **208** | **3.414 MB** |
 
 The target was under 100 MB and nothing that `results/` needs was left out.
-The archive `consolidation_reuse/release.zip` holds the 208 files: 1,523,437
-bytes, sha256 `5a89ac8582e1ca5e9aaa48b9ad382ad520b37405e3ef0125a8fdd80f156bcf7d`,
+The archive `consolidation_reuse/release.zip` holds the 208 files: 1,523,513
+bytes, sha256 `3d04e79418f8ad44d800ad84d8811541ab24293c5a68d0ea370a3f9ad0a5cc14`,
 its integrity checked and every member compared with the file on the disk.
