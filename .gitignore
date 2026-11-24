@@ -1,0 +1,37 @@
+# The public release of the project is the content of this repository: the
+# shared code in src/, the entry scripts in experiments/, the scripts that draw
+# the figures in figures/, the results of every item of the paper in results/,
+# the data of the task in data/ and the tests in tests/.
+#
+# Everything else that the working copy holds is local: the copy of the
+# instance tree (archive_final/), the directories that were moved off the
+# instance (consolidation_reuse/), the backups, the virtual environment and
+# the run logs. None of it belongs in a public repository.
+
+# the working copy of the project
+/consolidation_reuse/
+/archive_final/
+/backup_*.tar
+/code.zip
+
+# the editor and the agent
+.omo/
+.vscode/
+
+# the byte code and the environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# the output of the runs
+*.log
+nohup.out
+*.ckpt
+*.tmp
+
+# the secrets
+.env
+*.key
+*.pem

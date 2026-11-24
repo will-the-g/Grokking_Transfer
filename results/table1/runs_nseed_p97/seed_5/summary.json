@@ -1,0 +1,125 @@
+{
+  "seed": 5,
+  "mask_seed": 5,
+  "config": {
+    "p": 97,
+    "n_contexts": 4,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512
+  },
+  "coverage": 0.4,
+  "split_seed": 1701,
+  "runtime": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 5090",
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "hostname": "090e28ca596a",
+    "python_version": "3.12.15",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "threads": 8,
+    "deterministic": true,
+    "cuda_available": true,
+    "gpu_deterministic": true
+  },
+  "deterministic": true,
+  "device": "cuda",
+  "split_sizes": {
+    "train": 3763,
+    "dev": 1682,
+    "audit": 1682,
+    "exposed": 2282
+  },
+  "status": "grokked",
+  "grok_step": 6000,
+  "source_steps_run": 6000,
+  "source_elapsed_s": 198.31814169883728,
+  "stages": {
+    "grokked": {
+      "name": "grokked",
+      "step": 6000,
+      "ckpt": "grokked.pt",
+      "train_acc": 1.0,
+      "dev_mean": 0.9928656361474435,
+      "dev_worst": 0.9928656361474435,
+      "global_norm": 40.15470577459299
+    },
+    "memorized": {
+      "name": "memorized",
+      "step": 2500,
+      "ckpt": "step_0002500.pt",
+      "train_acc": 1.0,
+      "dev_mean": 0.0023781212841854932,
+      "dev_worst": 0.0023781212841854932,
+      "global_norm": 54.36454927462639
+    },
+    "transition": {
+      "name": "transition",
+      "step": 5000,
+      "ckpt": "step_0005000.pt",
+      "train_acc": 1.0,
+      "dev_mean": 0.31212841854934603,
+      "dev_worst": 0.31212841854934603,
+      "global_norm": 52.82858515787675
+    }
+  },
+  "transfers": {
+    "affine|memorized": {
+      "task": "affine",
+      "init": "memorized",
+      "done": true,
+      "steps": 2000,
+      "final_dev_mean": 0.030915576694411417,
+      "final_dev_worst": 0.01605231866825208,
+      "final_train_acc": 0.9992027637523253,
+      "stage_clean_acc": 0.0023781212841854932,
+      "global_norm_init": 54.36454927462639,
+      "steps_to_30": null,
+      "final_ckpt": "ckpts/transfer_affine_memorized_final.pt"
+    },
+    "affine|transition": {
+      "task": "affine",
+      "init": "transition",
+      "done": true,
+      "steps": 2000,
+      "final_dev_mean": 0.9888525564803805,
+      "final_dev_worst": 0.9702734839476813,
+      "final_train_acc": 1.0,
+      "stage_clean_acc": 0.31212841854934603,
+      "global_norm_init": 52.82858515787675,
+      "steps_to_30": 400,
+      "final_ckpt": "ckpts/transfer_affine_transition_final.pt"
+    },
+    "affine|grokked": {
+      "task": "affine",
+      "init": "grokked",
+      "done": true,
+      "steps": 2000,
+      "final_dev_mean": 0.9916765755053507,
+      "final_dev_worst": 0.9821640903686087,
+      "final_train_acc": 1.0,
+      "stage_clean_acc": 0.9928656361474435,
+      "global_norm_init": 40.15470577459299,
+      "steps_to_30": 300,
+      "final_ckpt": "ckpts/transfer_affine_grokked_final.pt"
+    },
+    "affine|norm_control": {
+      "task": "affine",
+      "init": "norm_control",
+      "done": true,
+      "steps": 2000,
+      "final_dev_mean": 0.036860879904875146,
+      "final_dev_worst": 0.011890606420927468,
+      "final_train_acc": 0.9968110550093011,
+      "stage_clean_acc": 0.0017835909631391202,
+      "global_norm_init": 40.154706910557394,
+      "steps_to_30": null,
+      "final_ckpt": "ckpts/transfer_affine_norm_control_final.pt"
+    }
+  },
+  "tiers_done": [
+    "A"
+  ],
+  "finished": true
+}

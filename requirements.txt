@@ -1,0 +1,10 @@
+# The packages of the release. The versions are the ones of the runs of the
+# paper; the environment of the runs is in results/reports and in the
+# environment.txt of the archive.
+numpy>=1.24
+torch>=2.1
+pandas>=2.0
+matplotlib>=3.7
+scipy>=1.11
+transformers>=4.40
+peft>=0.10

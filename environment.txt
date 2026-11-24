@@ -1,0 +1,356 @@
+# The environment that the archive records
+
+==============================================================================
+FILE: archive_final/requirements.txt
+==============================================================================
+numpy>=1.24
+torch>=2.1
+
+==============================================================================
+FILE: consolidation_reuse/requirements.txt
+==============================================================================
+numpy>=1.24
+torch>=2.1
+
+==============================================================================
+The runtime fingerprints of the run summaries
+==============================================================================
+  cuda_version     12.8
+  cuda_version     13.0
+  cuda_version     13.2
+  device           cuda
+  gpu_name         NVIDIA GeForce RTX 3060 Laptop GPU
+  gpu_name         NVIDIA GeForce RTX 5090
+  platform         Linux-7.0.0-38-generic-x86_64-with-glibc2.39
+  platform         Windows-10-10.0.26200-SP0
+  python_version   3.11.5
+  python_version   3.12.15
+  python_version   3.12.16
+  torch_version    2.11.0+cu128
+  torch_version    2.14.1+cu130
+  torch_version    2.15.0+cu132
+
+==============================================================================
+FILE: archive_final/nseed_backbone/benchmark.json  (6079 bytes)
+==============================================================================
+  "torch_version": "2.15.0+cpu",
+  "python_version": "3.11.5",
+  "reason": "Highest measured aggregate throughput among configurations using at most 14 physical cores (processes x threads_per_process = 4): 4 process(es) x 1 thread(s) reached 3.99 total steps/second
+  "notes": "steps_per_second is measured over the optimisation loop only (200 full-batch steps: forward, cross-entropy loss, backward, AdamW step); model construction and batch construction are excluded
+
+==============================================================================
+FILE: archive_final/nseed_backbone/benchmark_gpu.json  (14227 bytes)
+==============================================================================
+  "torch_version": "2.14.1+cu130",
+  "python_version": "3.11.5",
+  "device": "cuda",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  "device": "cuda",
+  "reason": "Highest measured aggregate throughput among configurations using at most 14 physical cores (processes x threads_per_process = 1): 1 process(es) x 1 thread(s) reached 24.94 total steps/secon
+  "error": "AcceleratorError: CUDA error: out of memory\nSearch for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nThe CUDA
+  "error": "AcceleratorError: CUDA error: unknown error\nSearch for `cudaErrorUnknown' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n",
+  "notes": "steps_per_second is measured over the optimisation loop only (200 full-batch steps: forward, cross-entropy loss, backward, AdamW step); model construction and batch construction are excluded
+
+==============================================================================
+FILE: archive_final/nseed_backbone/benchmark_gpu_nvidia_smi.json  (63912 bytes)
+==============================================================================
+
+==============================================================================
+FILE: consolidation_reuse/nseed_backbone/benchmark.json  (6079 bytes)
+==============================================================================
+  "torch_version": "2.15.0+cpu",
+  "python_version": "3.11.5",
+  "reason": "Highest measured aggregate throughput among configurations using at most 14 physical cores (processes x threads_per_process = 4): 4 process(es) x 1 thread(s) reached 3.99 total steps/second
+  "notes": "steps_per_second is measured over the optimisation loop only (200 full-batch steps: forward, cross-entropy loss, backward, AdamW step); model construction and batch construction are excluded
+
+==============================================================================
+FILE: consolidation_reuse/nseed_backbone/benchmark_gpu.json  (14227 bytes)
+==============================================================================
+  "torch_version": "2.14.1+cu130",
+  "python_version": "3.11.5",
+  "device": "cuda",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  "device": "cuda",
+  "reason": "Highest measured aggregate throughput among configurations using at most 14 physical cores (processes x threads_per_process = 1): 1 process(es) x 1 thread(s) reached 24.94 total steps/secon
+  "error": "AcceleratorError: CUDA error: out of memory\nSearch for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nThe CUDA
+  "error": "AcceleratorError: CUDA error: unknown error\nSearch for `cudaErrorUnknown' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n",
+  "notes": "steps_per_second is measured over the optimisation loop only (200 full-batch steps: forward, cross-entropy loss, backward, AdamW step); model construction and batch construction are excluded
+
+==============================================================================
+FILE: consolidation_reuse/nseed_backbone/benchmark_gpu_nvidia_smi.json  (63912 bytes)
+==============================================================================
+
+==============================================================================
+The packages installed in the local virtual environment (consolidation_reuse/.venv)
+==============================================================================
+  accelerate-1.15.0            1.15.0
+  huggingface_hub-2.4.0        2.4.0
+  numpy-2.4.6                  2.4.6
+  peft-0.21.3                  0.21.3
+  safetensors-0.8.0            0.8.0
+  tokenizers-0.23.3            0.23.3
+  torch-2.14.1+cu130           2.14.1+cu130
+  transformers-5.23.0          5.23.0
+
+==============================================================================
+The lines of the reports that name the environment
+==============================================================================
+  archive_final/REPORT_queue18.md                      | Queue 18 on the GPU instance (an RTX 5090, 32 GB of disk): the scale-up of the
+  archive_final/REPORT_queue18.md                      | | 2026-11-20T20:09:37Z | FAILED P1 config C: the three workers of the pythia-410m do not fit on the card. Every worker holds the model, its AdamW states and a copy of the
+  archive_final/REPORT_queue19.md                      | Queue 19 on the GPU instance (an RTX 5090): the energy-matched controls of the
+  archive_final/REPORT_queue20.md                      | Queue 20 on the GPU instance (an RTX 5090): the dose-matched frequency edits
+  archive_final/REPORT_queue21.md                      | Queue 21 on the GPU instance (an RTX 5090, torch 2.15.0+cu132, the interpreter
+  archive_final/REPORT_queue22.md                      | Queue 22 on the GPU instance (an RTX 5090, torch 2.15.0+cu132, the interpreter
+  archive_final/REPORT_queue22.md                      | | the model | `EleutherAI/pythia-160m` at the revision `step143000`, in float32 |
+  archive_final/REPORT_queue22.md                      | #   /root/venv/bin/python nseed_backbone/q22_run.py --experiment 2 --procs 4 \
+  archive_final/REPORT_queue22.md                      | #   /root/venv/bin/python nseed_backbone/q22_run.py --experiment 1 --procs 4 \
+  archive_final/REPORT_queue22.md                      | /root/venv/bin/python nseed_backbone/q22_report.py --out runs_queue22/q22_tables.md
+  archive_final/REPORT_queue22.md                      | /root/venv/bin/python nseed_backbone/q22_pack.py --out results_queue22.zip
+  archive_final/REPORT_queue22.md                      | | `nseed_backbone/q22_run.py` | the driver of the two experiments |
+  archive_final/nseed_backbone/REPORT_1.md             | Environment: the project virtualenv `.venv` was missing torch and numpy, so I
+  archive_final/nseed_backbone/REPORT_1.md             | installed `numpy 2.4.6` and `torch 2.15.0+cpu` (CPU wheel, per `SETUP.md`).
+  archive_final/nseed_backbone/REPORT_1.md             | `python check_env.py` reports `split sizes match expected: True` and ends in `OK`.
+  archive_final/nseed_backbone/REPORT_1.md             | "reason": "Highest measured aggregate throughput among configurations using at most 14 physical cores (processes x threads_per_process = 4): 4 process(es) x 1 thread(s) r
+  archive_final/nseed_backbone/REPORT_1.md             | Windows 10 build 26200, torch 2.15.0+cpu, Python 3.11.5.
+  archive_final/nseed_backbone/REPORT_1.md             | | `run_seed.py` | Per-seed driver: source training, stage selection, tiered transfers, `summary.json`, `norms.csv` |
+  archive_final/nseed_backbone/REPORT_1b.md            | the CUDA build of torch had to be installed.
+  archive_final/nseed_backbone/REPORT_1b.md            | | NVIDIA-SMI 592.82                 Driver Version: 592.82         CUDA Version: 13.1     |
+  archive_final/nseed_backbone/REPORT_1b.md            | | GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+  archive_final/nseed_backbone/REPORT_1b.md            | |   0  NVIDIA GeForce RTX 3060 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+  archive_final/nseed_backbone/REPORT_1b.md            | * **GPU name:** NVIDIA GeForce RTX 3060 Laptop GPU
+  archive_final/nseed_backbone/REPORT_1b.md            | * **Driver:** 592.82 (CUDA Version 13.1)
+  archive_final/nseed_backbone/REPORT_1b.md            | ## 2. CUDA build of torch
+  archive_final/nseed_backbone/REPORT_1b.md            | The CPU build in the project `.venv` was `torch 2.15.0+cpu`. The newest CUDA
+  archive_final/nseed_backbone/REPORT_1b.md            | wheel published on the PyTorch index is **2.14.1+cu130** (`cu130` tops out at
+  archive_final/nseed_backbone/REPORT_1b.md            | 2.14.1, `cu128` at 2.11.0), and driver 592.82 is above the 580.x minimum for
+  archive_final/nseed_backbone/REPORT_1b.md            | CUDA 13.0, so:
+  archive_final/nseed_backbone/REPORT_1b.md            | the final torch version was checked:
+  archive_final/nseed_backbone/REPORT_1b.md            | torch 2.14.1+cu130
+  archive_final/nseed_backbone/REPORT_1b.md            | cuda available: True
+  archive_final/nseed_backbone/REPORT_1b.md            | device: NVIDIA GeForce RTX 3060 Laptop GPU
+  archive_final/nseed_backbone/REPORT_1b.md            | torch.version.cuda: 13.0
+  archive_final/nseed_backbone/REPORT_1b.md            | The first CUDA build refused to import at all:
+  archive_final/nseed_backbone/REPORT_1b.md            | * Confirmed by construction: anaconda's own torch 2.2.0 `c10.dll` (built for
+  archive_final/nseed_backbone/REPORT_1b.md            | MSVC 14.2x) loads fine, while torch 2.11.0+**cpu** and 2.14.1+cu130 `c10.dll`
+  archive_final/nseed_backbone/REPORT_1b.md            | fail identically - so it was never a CUDA problem.
+  archive_final/nseed_backbone/REPORT_1b.md            | * Fix: preload the System32 runtime before torch is imported. This is done in
+  archive_final/nseed_backbone/REPORT_1b.md            | (checked mechanically: no module imports torch first).
+  archive_final/nseed_backbone/REPORT_1b.md            | * `--device {cpu,cuda,auto}` was added to `run_seed.py`, `run_scratch.py`,
+  archive_final/nseed_backbone/REPORT_1b.md            | which resolves to `cuda` when `torch.cuda.is_available()` and to `cpu`
+  archive_final/nseed_backbone/REPORT_1b.md            | * **Resume restores the CUDA RNG state** (`common.rng_state_extended` /
+  archive_final/nseed_backbone/REPORT_1b.md            | `['cuda', 'numpy', 'python', 'torch']`.
+  archive_final/nseed_backbone/REPORT_1b.md            | (`{'threads': 1, 'deterministic': False, 'device': 'cuda',
+  archive_final/nseed_backbone/REPORT_1b.md            | 'cuda_available': True, 'gpu_deterministic': False, 'torch_version': '2.14.1+cu130'}`).
+  archive_final/nseed_backbone/REPORT_1b.md            | .\.venv\Scripts\python.exe nseed_backbone\benchmark.py --repeat 3 --single-threads 1 --multi 1:1,3:1,6:1,9:1 --device cuda --out nseed_backbone\benchmark_gpu.json
+  archive_final/nseed_backbone/REPORT_1b.md            | | 3 | 12.07 | **0.00** / 12.07 / 17.48 | 23.11 | one run died with `CUDA error: out of memory` |
+  archive_final/nseed_backbone/REPORT_1b.md            | | 9 | 2.48 | **0.00** / 2.48 / 2.48 | 2.57 | one run died with `CUDA error: unknown error` |
+  archive_final/nseed_backbone/REPORT_1b.md            | `AcceleratorError: CUDA error: out of memory` (3 processes) and
+  archive_final/nseed_backbone/REPORT_1b.md            | `CUDA error: unknown error` (9 processes). The card has 6 GB of VRAM and each
+  archive_final/nseed_backbone/REPORT_1b.md            | CUDA context costs several hundred MB, so the multi-process GPU runs are at or
+  archive_final/nseed_backbone/REPORT_1b.md            | it only multiplies the CUDA contexts until the VRAM runs out.
+  archive_final/nseed_backbone/REPORT_1b.md            | **Recommended: `--procs 1 --device cuda` for the GPU run.**
+  archive_final/nseed_backbone/REPORT_1b.md            | runs already died with CUDA out-of-memory. The job scheduler is unaffected by
+  archive_final/nseed_backbone/REPORT_1b.md            | * `--procs 1 --device cuda`: ~11 minutes per seed at 25 steps/s, so roughly
+  archive_final/nseed_backbone/REPORT_1b.md            | * `--procs 2 --device cuda` would overlap two seeds at about the same total
+  archive_final/nseed_backbone/REPORT_1b.md            | --device cuda`), but the grok detection, the stage selection and the
+  archive_final/nseed_backbone/REPORT_1b.md            | 2.48 steps/s median and one of the three runs died with a CUDA error.
+  archive_final/nseed_backbone/REPORT_1b.md            | * The GPU benchmark's multi-process totals include worker spawn, torch import
+  archive_final/nseed_backbone/REPORT_1b.md            | and CUDA context creation; the "loop-only" column is the rate over the
+  archive_final/nseed_backbone/REPORT_1b.md            | * The CUDA build required a torch downgrade from 2.15.0+cpu to
+  archive_final/nseed_backbone/REPORT_1b.md            | 2.14.1+cu130, because no CUDA wheel exists for 2.15.
+  archive_final/nseed_backbone/REPORT_2.md             | .\.venv\Scripts\python.exe nseed_backbone\run_batch.py --seeds 5 6 7 8 9 10 --procs 3 --threads 1 --tiers A --device cuda [--resume]
+  archive_final/nseed_backbone/REPORT_2.md             | Hardware: NVIDIA GeForce RTX 3060 Laptop GPU (driver 592.82, 6144 MiB VRAM),
+  archive_final/nseed_backbone/REPORT_3.md             | .\.venv\Scripts\python.exe nseed_backbone\run_batch.py --seeds 11 12 13 14 --tiers A --device cuda
+  archive_final/nseed_backbone/REPORT_3.md             | .\.venv\Scripts\python.exe nseed_backbone\run_localize.py --seeds 5 8 --device cuda   (and 6 9, and 7 10)
+  archive_final/nseed_backbone/REPORT_3.md             | .\.venv\Scripts\python.exe nseed_backbone\integrity_check.py --seed 5 --task affine --init memorized --device cuda
+  archive_final/nseed_backbone/REPORT_3.md             | runtime: {'threads': 1, 'deterministic': True, 'device': 'cuda', 'cuda_available': True, 'gpu_deterministic': True, 'torch_version': '2.14.1+cu130'}
+  archive_final/nseed_backbone/REPORT_3.md             | runtime: {'threads': 1, 'deterministic': True, 'device': 'cuda', ...}
+  archive_final/nseed_backbone/REPORT_3.md             | `run_batch.py --seeds 11 12 13 14 --tiers A --device cuda` (the default
+  archive_final/nseed_backbone/REPORT_3.md             | `run_localize.py --seeds ... --device cuda`: 16 jobs per seed, each a
+  archive_final/nseed_backbone/REPORT_4.md             | `--device cuda` with `--procs 3`. Nothing outside `nseed_backbone/` was edited.
+  archive_final/nseed_backbone/REPORT_4.md             | python nseed_backbone\status.py --watch
+  archive_final/nseed_backbone/REPORT_4.md             | .\.venv\Scripts\python.exe nseed_backbone\integrity_check.py --seed 5 --task affine --init memorized --device cuda
+  archive_final/nseed_backbone/REPORT_4.md             | .\.venv\Scripts\python.exe nseed_backbone\run_components.py --seeds 5 6 7 8 9 10 --procs 3 --device cuda
+  archive_final/nseed_backbone/REPORT_4.md             | .\.venv\Scripts\python.exe nseed_backbone\run_specificity.py --seeds 5 6 7 --procs 3 --device cuda
+  archive_final/nseed_backbone/REPORT_4.md             | .\.venv\Scripts\python.exe nseed_backbone\body_metrics.py --seeds 5 6 7 8 9 10 --device cuda
+  archive_final/nseed_backbone/REPORT_4.md             | runtime: {'threads': 1, 'deterministic': True, 'device': 'cuda', 'cuda_available': True, 'gpu_deterministic': True, 'torch_version': '2.14.1+cu130'}
+  archive_final/nseed_backbone/REPORT_5_prep.md        | Batch 4 was interrupted on this laptop (Windows, RTX 3060 Laptop). This report
+  archive_final/nseed_backbone/REPORT_5_prep.md        | **Nothing was executed in the last session except `python -m py_compile` and
+  archive_final/nseed_backbone/REPORT_5_prep.md        | device, the GPU name, the torch version, the CUDA version, the host name, the
+  archive_final/nseed_backbone/REPORT_5_prep.md        | Python version and the platform; `common.setup()` embeds it in its return
+  archive_final/nseed_backbone/REPORT_5_prep.md        | * `nseed_backbone/run_batch4.sh` - the Linux driver: `set -u`, forward slashes
+  archive_final/nseed_backbone/REPORT_5_prep.md        | exported, `--device cuda`, `PROCS` from the environment (default 6), `SEEDS`
+  archive_final/nseed_backbone/REPORT_5_prep.md        | needs `numpy` and a CUDA build of torch that supports Blackwell (sm_120), i.e.
+  archive_final/nseed_backbone/REPORT_5_prep.md        | pip install torch --index-url https://download.pytorch.org/whl/cu128
+  archive_final/nseed_backbone/REPORT_5_prep.md        | `python -m py_compile` on the files above (all of them compile) and `--help`
+  archive_final/nseed_backbone/REPORT_6.md             | | python | `/venv/main/bin/python` (3.12) |
+  archive_final/nseed_backbone/REPORT_6.md             | | torch | **2.11.0+cu128** (CUDA 12.8) |
+  archive_final/nseed_backbone/REPORT_6.md             | | GPU | NVIDIA GeForce RTX 5090 |
+  archive_final/nseed_backbone/REPORT_6.md             | | session marker | `=== NEW SESSION 2026-11-13 04:07:35 port 27312 torch 2.11.0+cu128 ===` appended to `runs_nseed/batch.log` |
+  archive_final/nseed_backbone/REPORT_6.md             | **Torch version caveat.** Batch 4 ran on torch **2.14.1+cu130**; this instance
+  archive_final/nseed_backbone/REPORT_6.md             | runs torch **2.11.0+cu128**. The Batch 4b numbers are therefore **not
+  archive_final/nseed_backbone/REPORT_6.md             | | 0 | 04:07:37 - 04:13:55 | unit test suite (`python -m unittest -v test_nseed`) | - | 48 tests | OK, 375.892 s |
+  archive_final/nseed_backbone/REPORT_6.md             | | 1 | 04:13:55 - 04:35:25 | `run_scratch_clean.py --seeds 9001 9002 9003 --procs 4 --device cuda --resume` | 6 jobs | 6 jobs | 6 |
+  archive_final/nseed_backbone/REPORT_6.md             | | 2 | 04:35:26 - 04:38:00, re-run 05:33:52 - 05:46:56 | `run_specificity_aged.py --seeds 5 6 7 8 9 10 --procs 4 --device cuda --resume` | 12 source jobs | 12 source + 24 
+  archive_final/nseed_backbone/REPORT_6.md             | | 3 | 04:38:01 - 04:45:59 | `run_factorial.py --seeds 11 13 14 --procs 4 --device cuda --jobs factorial embedding --cells ... --resume` | 33 jobs | 54 jobs | 54 |
+  archive_final/nseed_backbone/REPORT_6.md             | | 4 | 04:46:00 - 04:46:04 | `attention_stats.py --seeds 5 ... 14 --device cuda` | - | 432 rows | 432 rows |
+  archive_final/nseed_backbone/REPORT_6.md             | `python nseed_backbone/status.py` after the batch: `jobs done 207/207 running 0
+  archive_final/nseed_backbone/REPORT_6.md             | Measured on the instance, RTX 5090, with the batch's determinism flags unless
+  archive_final/nseed_backbone/REPORT_6.md             | `python -m unittest -v test_nseed` on the instance: **51 tests, OK** with the
+  archive_final/nseed_backbone/REPORT_6.md             | * The results are not bit-identical to Batch 4 (torch 2.11.0+cu128 here,
+  archive_final/nseed_backbone/REPORT_6_prep.md        | Batch 4b was written for the rented Linux instance (Ubuntu, python3, one RTX
+  archive_final/nseed_backbone/REPORT_6_prep.md        | **Nothing was executed on this machine except `python -m py_compile` on the
+  archive_final/nseed_backbone/REPORT_6_prep.md        | | `run_batch4b.sh` | Step 5: the Linux driver. `set -u`, forward slashes, `python3`, `NSEED_DETERMINISTIC=1` and `NSEED_DETERMINISTIC_GPU=1` exported, `--device cuda`, `P
+  archive_final/nseed_backbone/REPORT_6_prep.md        | report the GPU name, the torch version, the CUDA version, the host name and
+  archive_final/nseed_backbone/REPORT_6_prep.md        | 10. **Nothing was verified on Blackwell.** The RTX 5090 needs a CUDA build of
+  archive_final/nseed_backbone/REPORT_6_prep.md        | torch with sm_120 support (a cu128 or newer wheel); the instance's
+  archive_final/nseed_backbone/REPORT_6_prep.md        | GPU name and torch version at startup so this is visible immediately.
+  archive_final/nseed_backbone/REPORT_job3.md          | A2 GPU NVIDIA GeForce RTX 3060 Laptop GPU 6144 MiB total 5675 MiB free
+  archive_final/nseed_backbone/REPORT_job9.md          | | seed | stored | new | difference | torch | gpu |
+  archive_final/nseed_backbone/REPORT_job9.md          | | 5 | 0.9916765755053507 | 0.9916765755053507 | 0.0 | 2.15.0+cu132 | NVIDIA GeForce RTX 5090 |
+  archive_final/nseed_backbone/REPORT_job9.md          | | 6 | 0.9725806451612904 | 0.9725806451612904 | 0.0 | 2.15.0+cu132 | NVIDIA GeForce RTX 5090 |
+  archive_final/nseed_backbone/REPORT_job9.md          | | 7 | 0.9454518430439952 | 0.9454518430439952 | 0.0 | 2.15.0+cu132 | NVIDIA GeForce RTX 5090 |
+  archive_final/nseed_backbone/REPORT_queue12.md       | | A1: CUDA OOM twice with 3 workers (11 GB per worker); fixed to one model per worker and rerun with PROCS=2 (0 failures in the final run) |
+  archive_final/nseed_backbone/REPORT_queue13.md       | | B1: the sub sources (seeds 5-9) never grokked within the 50,000-step cap, so their stage transfers are missing and only the random-init transfers ran; B2: with coverage
+  archive_final/nseed_backbone/REPORT_queue14.md       | | FAILED attempt 1, step a | the workers returned the job with its CUDA tensors, so the pool could not pickle the result (MaybeEncodingError); the transfer rows were lost
+  archive_final/nseed_backbone/REPORT_queue14.md       | | FAILED attempt 1, step c | the worker processes rebuilt the task with the size 59, so the group labels were outside the vocabulary and the CUDA gather asserted | |
+  archive_final/nseed_backbone/REPORT_queue16.md       | | [2026-11-19T01:25:41Z] FAILED t1, the second attempt | every measurement job failed: the worker called a function key that the job did not carry and the job carried a C
+  archive_final/nseed_backbone/REPORT_queue16.md       | | [2026-11-19T02:53:14Z] FAILED r1, the second attempt | the pilot was interrupted while it waited for the file with the fix to be uploaded, and it stopped with a TypeErr
+  consolidation_reuse/REPORT_job9.md                   | | seed | stored | new | difference | torch | gpu |
+  consolidation_reuse/REPORT_queue21.md                | Queue 21 on the GPU instance (an RTX 5090, torch 2.15.0+cu132, the interpreter
+  consolidation_reuse/REPORT_queue22.md                | Queue 22 on the GPU instance (an RTX 5090, torch 2.15.0+cu132, the interpreter
+  consolidation_reuse/REPORT_queue22.md                | | the model | `EleutherAI/pythia-160m` at the revision `step143000`, in float32 |
+  consolidation_reuse/REPORT_queue22.md                | #   /root/venv/bin/python nseed_backbone/q22_run.py --experiment 2 --procs 4 \
+  consolidation_reuse/REPORT_queue22.md                | #   /root/venv/bin/python nseed_backbone/q22_run.py --experiment 1 --procs 4 \
+  consolidation_reuse/REPORT_queue22.md                | /root/venv/bin/python nseed_backbone/q22_report.py --out runs_queue22/q22_tables.md
+  consolidation_reuse/REPORT_queue22.md                | /root/venv/bin/python nseed_backbone/q22_pack.py --out results_queue22.zip
+  consolidation_reuse/REPORT_queue22.md                | | `nseed_backbone/q22_run.py` | the driver of the two experiments |
+  consolidation_reuse/nseed_backbone/REPORT_1.md       | Environment: the project virtualenv `.venv` was missing torch and numpy, so I
+  consolidation_reuse/nseed_backbone/REPORT_1.md       | installed `numpy 2.4.6` and `torch 2.15.0+cpu` (CPU wheel, per `SETUP.md`).
+  consolidation_reuse/nseed_backbone/REPORT_1.md       | `python check_env.py` reports `split sizes match expected: True` and ends in `OK`.
+  consolidation_reuse/nseed_backbone/REPORT_1.md       | "reason": "Highest measured aggregate throughput among configurations using at most 14 physical cores (processes x threads_per_process = 4): 4 process(es) x 1 thread(s) r
+  consolidation_reuse/nseed_backbone/REPORT_1.md       | Windows 10 build 26200, torch 2.15.0+cpu, Python 3.11.5.
+  consolidation_reuse/nseed_backbone/REPORT_1.md       | | `run_seed.py` | Per-seed driver: source training, stage selection, tiered transfers, `summary.json`, `norms.csv` |
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | the CUDA build of torch had to be installed.
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | | NVIDIA-SMI 592.82                 Driver Version: 592.82         CUDA Version: 13.1     |
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | | GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | |   0  NVIDIA GeForce RTX 3060 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * **GPU name:** NVIDIA GeForce RTX 3060 Laptop GPU
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * **Driver:** 592.82 (CUDA Version 13.1)
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | ## 2. CUDA build of torch
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | The CPU build in the project `.venv` was `torch 2.15.0+cpu`. The newest CUDA
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | wheel published on the PyTorch index is **2.14.1+cu130** (`cu130` tops out at
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | 2.14.1, `cu128` at 2.11.0), and driver 592.82 is above the 580.x minimum for
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | CUDA 13.0, so:
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | the final torch version was checked:
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | torch 2.14.1+cu130
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | cuda available: True
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | device: NVIDIA GeForce RTX 3060 Laptop GPU
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | torch.version.cuda: 13.0
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | The first CUDA build refused to import at all:
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * Confirmed by construction: anaconda's own torch 2.2.0 `c10.dll` (built for
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | MSVC 14.2x) loads fine, while torch 2.11.0+**cpu** and 2.14.1+cu130 `c10.dll`
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | fail identically - so it was never a CUDA problem.
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * Fix: preload the System32 runtime before torch is imported. This is done in
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | (checked mechanically: no module imports torch first).
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * `--device {cpu,cuda,auto}` was added to `run_seed.py`, `run_scratch.py`,
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | which resolves to `cuda` when `torch.cuda.is_available()` and to `cpu`
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * **Resume restores the CUDA RNG state** (`common.rng_state_extended` /
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | `['cuda', 'numpy', 'python', 'torch']`.
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | (`{'threads': 1, 'deterministic': False, 'device': 'cuda',
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | 'cuda_available': True, 'gpu_deterministic': False, 'torch_version': '2.14.1+cu130'}`).
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | .\.venv\Scripts\python.exe nseed_backbone\benchmark.py --repeat 3 --single-threads 1 --multi 1:1,3:1,6:1,9:1 --device cuda --out nseed_backbone\benchmark_gpu.json
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | | 3 | 12.07 | **0.00** / 12.07 / 17.48 | 23.11 | one run died with `CUDA error: out of memory` |
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | | 9 | 2.48 | **0.00** / 2.48 / 2.48 | 2.57 | one run died with `CUDA error: unknown error` |
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | `AcceleratorError: CUDA error: out of memory` (3 processes) and
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | `CUDA error: unknown error` (9 processes). The card has 6 GB of VRAM and each
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | CUDA context costs several hundred MB, so the multi-process GPU runs are at or
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | it only multiplies the CUDA contexts until the VRAM runs out.
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | **Recommended: `--procs 1 --device cuda` for the GPU run.**
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | runs already died with CUDA out-of-memory. The job scheduler is unaffected by
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * `--procs 1 --device cuda`: ~11 minutes per seed at 25 steps/s, so roughly
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * `--procs 2 --device cuda` would overlap two seeds at about the same total
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | --device cuda`), but the grok detection, the stage selection and the
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | 2.48 steps/s median and one of the three runs died with a CUDA error.
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * The GPU benchmark's multi-process totals include worker spawn, torch import
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | and CUDA context creation; the "loop-only" column is the rate over the
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | * The CUDA build required a torch downgrade from 2.15.0+cpu to
+  consolidation_reuse/nseed_backbone/REPORT_1b.md      | 2.14.1+cu130, because no CUDA wheel exists for 2.15.
+  consolidation_reuse/nseed_backbone/REPORT_2.md       | .\.venv\Scripts\python.exe nseed_backbone\run_batch.py --seeds 5 6 7 8 9 10 --procs 3 --threads 1 --tiers A --device cuda [--resume]
+  consolidation_reuse/nseed_backbone/REPORT_2.md       | Hardware: NVIDIA GeForce RTX 3060 Laptop GPU (driver 592.82, 6144 MiB VRAM),
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | .\.venv\Scripts\python.exe nseed_backbone\run_batch.py --seeds 11 12 13 14 --tiers A --device cuda
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | .\.venv\Scripts\python.exe nseed_backbone\run_localize.py --seeds 5 8 --device cuda   (and 6 9, and 7 10)
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | .\.venv\Scripts\python.exe nseed_backbone\integrity_check.py --seed 5 --task affine --init memorized --device cuda
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | runtime: {'threads': 1, 'deterministic': True, 'device': 'cuda', 'cuda_available': True, 'gpu_deterministic': True, 'torch_version': '2.14.1+cu130'}
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | runtime: {'threads': 1, 'deterministic': True, 'device': 'cuda', ...}
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | `run_batch.py --seeds 11 12 13 14 --tiers A --device cuda` (the default
+  consolidation_reuse/nseed_backbone/REPORT_3.md       | `run_localize.py --seeds ... --device cuda`: 16 jobs per seed, each a
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | `--device cuda` with `--procs 3`. Nothing outside `nseed_backbone/` was edited.
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | python nseed_backbone\status.py --watch
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | .\.venv\Scripts\python.exe nseed_backbone\integrity_check.py --seed 5 --task affine --init memorized --device cuda
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | .\.venv\Scripts\python.exe nseed_backbone\run_components.py --seeds 5 6 7 8 9 10 --procs 3 --device cuda
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | .\.venv\Scripts\python.exe nseed_backbone\run_specificity.py --seeds 5 6 7 --procs 3 --device cuda
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | .\.venv\Scripts\python.exe nseed_backbone\body_metrics.py --seeds 5 6 7 8 9 10 --device cuda
+  consolidation_reuse/nseed_backbone/REPORT_4.md       | runtime: {'threads': 1, 'deterministic': True, 'device': 'cuda', 'cuda_available': True, 'gpu_deterministic': True, 'torch_version': '2.14.1+cu130'}
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | Batch 4 was interrupted on this laptop (Windows, RTX 3060 Laptop). This report
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | **Nothing was executed in the last session except `python -m py_compile` and
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | device, the GPU name, the torch version, the CUDA version, the host name, the
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | Python version and the platform; `common.setup()` embeds it in its return
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | * `nseed_backbone/run_batch4.sh` - the Linux driver: `set -u`, forward slashes
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | exported, `--device cuda`, `PROCS` from the environment (default 6), `SEEDS`
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | needs `numpy` and a CUDA build of torch that supports Blackwell (sm_120), i.e.
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | pip install torch --index-url https://download.pytorch.org/whl/cu128
+  consolidation_reuse/nseed_backbone/REPORT_5_prep.md  | `python -m py_compile` on the files above (all of them compile) and `--help`
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | python | `/venv/main/bin/python` (3.12) |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | torch | **2.11.0+cu128** (CUDA 12.8) |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | GPU | NVIDIA GeForce RTX 5090 |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | session marker | `=== NEW SESSION 2026-11-13 04:07:35 port 27312 torch 2.11.0+cu128 ===` appended to `runs_nseed/batch.log` |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | **Torch version caveat.** Batch 4 ran on torch **2.14.1+cu130**; this instance
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | runs torch **2.11.0+cu128**. The Batch 4b numbers are therefore **not
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | 0 | 04:07:37 - 04:13:55 | unit test suite (`python -m unittest -v test_nseed`) | - | 48 tests | OK, 375.892 s |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | 1 | 04:13:55 - 04:35:25 | `run_scratch_clean.py --seeds 9001 9002 9003 --procs 4 --device cuda --resume` | 6 jobs | 6 jobs | 6 |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | 2 | 04:35:26 - 04:38:00, re-run 05:33:52 - 05:46:56 | `run_specificity_aged.py --seeds 5 6 7 8 9 10 --procs 4 --device cuda --resume` | 12 source jobs | 12 source + 24 
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | 3 | 04:38:01 - 04:45:59 | `run_factorial.py --seeds 11 13 14 --procs 4 --device cuda --jobs factorial embedding --cells ... --resume` | 33 jobs | 54 jobs | 54 |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | | 4 | 04:46:00 - 04:46:04 | `attention_stats.py --seeds 5 ... 14 --device cuda` | - | 432 rows | 432 rows |
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | `python nseed_backbone/status.py` after the batch: `jobs done 207/207 running 0
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | Measured on the instance, RTX 5090, with the batch's determinism flags unless
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | `python -m unittest -v test_nseed` on the instance: **51 tests, OK** with the
+  consolidation_reuse/nseed_backbone/REPORT_6.md       | * The results are not bit-identical to Batch 4 (torch 2.11.0+cu128 here,
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | Batch 4b was written for the rented Linux instance (Ubuntu, python3, one RTX
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | **Nothing was executed on this machine except `python -m py_compile` on the
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | | `run_batch4b.sh` | Step 5: the Linux driver. `set -u`, forward slashes, `python3`, `NSEED_DETERMINISTIC=1` and `NSEED_DETERMINISTIC_GPU=1` exported, `--device cuda`, `P
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | report the GPU name, the torch version, the CUDA version, the host name and
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | 10. **Nothing was verified on Blackwell.** The RTX 5090 needs a CUDA build of
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | torch with sm_120 support (a cu128 or newer wheel); the instance's
+  consolidation_reuse/nseed_backbone/REPORT_6_prep.md  | GPU name and torch version at startup so this is visible immediately.
+  consolidation_reuse/nseed_backbone/REPORT_job3.md    | A2 GPU NVIDIA GeForce RTX 3060 Laptop GPU 6144 MiB total 5675 MiB free
+  consolidation_reuse/nseed_backbone/REPORT_job9.md    | | seed | stored | new | difference | torch | gpu |
+  consolidation_reuse/nseed_backbone/REPORT_job9.md    | | 5 | 0.9916765755053507 | 0.9916765755053507 | 0.0 | 2.15.0+cu132 | NVIDIA GeForce RTX 5090 |
+  consolidation_reuse/nseed_backbone/REPORT_job9.md    | | 6 | 0.9725806451612904 | 0.9725806451612904 | 0.0 | 2.15.0+cu132 | NVIDIA GeForce RTX 5090 |
+  consolidation_reuse/nseed_backbone/REPORT_job9.md    | | 7 | 0.9454518430439952 | 0.9454518430439952 | 0.0 | 2.15.0+cu132 | NVIDIA GeForce RTX 5090 |
+  consolidation_reuse/nseed_backbone/REPORT_queue14.md | | FAILED attempt 1, step a | the workers returned the job with its CUDA tensors, so the pool could not pickle the result (MaybeEncodingError); the transfer rows were lost
+  consolidation_reuse/nseed_backbone/REPORT_queue14.md | | FAILED attempt 1, step c | the worker processes rebuilt the task with the size 59, so the group labels were outside the vocabulary and the CUDA gather asserted | |
+  consolidation_reuse/nseed_backbone/REPORT_queue18.md | Queue 18 on the GPU instance (an RTX 5090, 32 GB of disk): the scale-up of the
+  consolidation_reuse/nseed_backbone/REPORT_queue18.md | | 2026-11-20T20:09:37Z | FAILED P1 config C: the three workers of the pythia-410m do not fit on the card. Every worker holds the model, its AdamW states and a copy of the
+  consolidation_reuse/nseed_backbone/REPORT_queue19.md | Queue 19 on the GPU instance (an RTX 5090): the energy-matched controls of the
+  consolidation_reuse/nseed_backbone/REPORT_queue20.md | Queue 20 on the GPU instance (an RTX 5090): the dose-matched frequency edits
+  consolidation_reuse/results_queue12/REPORT_queue12.md | | A1: CUDA OOM twice with 3 workers (11 GB per worker); fixed to one model per worker and rerun with PROCS=2 (0 failures in the final run) |
+  consolidation_reuse/results_queue13/REPORT_queue13.md | | B1: the sub sources (seeds 5-9) never grokked within the 50,000-step cap, so their stage transfers are missing and only the random-init transfers ran; B2: with coverage
+  consolidation_reuse/results_queue14/REPORT_queue14.md | | FAILED attempt 1, step a | the workers returned the job with its CUDA tensors, so the pool could not pickle the result (MaybeEncodingError); the transfer rows were lost
+  consolidation_reuse/results_queue14/REPORT_queue14.md | | FAILED attempt 1, step c | the worker processes rebuilt the task with the size 59, so the group labels were outside the vocabulary and the CUDA gather asserted | |
+  consolidation_reuse/results_queue16/REPORT_queue16.md | | [2026-11-19T01:25:41Z] FAILED t1, the second attempt | every measurement job failed: the worker called a function key that the job did not carry and the job carried a C
+  consolidation_reuse/results_queue16/REPORT_queue16.md | | [2026-11-19T02:53:14Z] FAILED r1, the second attempt | the pilot was interrupted while it waited for the file with the fix to be uploaded, and it stopped with a TypeErr
+  consolidation_reuse/results_queue18/REPORT_queue18.md | Queue 18 on the GPU instance (an RTX 5090, 32 GB of disk): the scale-up of the
+  consolidation_reuse/results_queue18/REPORT_queue18.md | | 2026-11-20T20:09:37Z | FAILED P1 config C: the three workers of the pythia-410m do not fit on the card. Every worker holds the model, its AdamW states and a copy of the
+  consolidation_reuse/results_queue19/REPORT_queue19.md | Queue 19 on the GPU instance (an RTX 5090): the energy-matched controls of the
+  consolidation_reuse/results_queue20/REPORT_queue20.md | Queue 20 on the GPU instance (an RTX 5090): the dose-matched frequency edits
+  consolidation_reuse/results_queue21/REPORT_queue21.md | Queue 21 on the GPU instance (an RTX 5090, torch 2.15.0+cu132, the interpreter
+  consolidation_reuse/results_queue22/REPORT_queue22.md | Queue 22 on the GPU instance (an RTX 5090, torch 2.15.0+cu132, the interpreter
+  consolidation_reuse/results_queue22/REPORT_queue22.md | | the model | `EleutherAI/pythia-160m` at the revision `step143000`, in float32 |
+  consolidation_reuse/results_queue22/REPORT_queue22.md | #   /root/venv/bin/python nseed_backbone/q22_run.py --experiment 2 --procs 4 \
+  consolidation_reuse/results_queue22/REPORT_queue22.md | #   /root/venv/bin/python nseed_backbone/q22_run.py --experiment 1 --procs 4 \
+  consolidation_reuse/results_queue22/REPORT_queue22.md | /root/venv/bin/python nseed_backbone/q22_report.py --out runs_queue22/q22_tables.md
+  consolidation_reuse/results_queue22/REPORT_queue22.md | /root/venv/bin/python nseed_backbone/q22_pack.py --out results_queue22.zip
+  consolidation_reuse/results_queue22/REPORT_queue22.md | | `nseed_backbone/q22_run.py` | the driver of the two experiments |

@@ -1,0 +1,252 @@
+{
+  "seed": 7,
+  "device": "cuda",
+  "jobs": {
+    "reset_numeric_embed": {
+      "name": "reset_numeric_embed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "numeric_embed"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.012,
+      "final_dev_worst": 0.008,
+      "final_train_acc": 0.8719468390804598,
+      "best_dev_mean": 0.013200000000000002,
+      "source_train_acc": 0.01867816091954023,
+      "source_dev_mean": 0.0064,
+      "source_dev_worst": 0.0064,
+      "global_norm_init": 84.40347304510932,
+      "final_ckpt": "ckpts/reset_numeric_embed_final.pt"
+    },
+    "reset_other_embed": {
+      "name": "reset_other_embed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "other_embed"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.5316000000000001,
+      "final_dev_worst": 0.28,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.5316000000000001,
+      "source_train_acc": 0.017600574712643677,
+      "source_dev_mean": 0.0164,
+      "source_dev_worst": 0.0112,
+      "global_norm_init": 48.18328795111794,
+      "final_ckpt": "ckpts/reset_other_embed_final.pt"
+    },
+    "reset_attn": {
+      "name": "reset_attn",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.5680000000000001,
+      "final_dev_worst": 0.3296,
+      "final_train_acc": 0.9989224137931034,
+      "best_dev_mean": 0.5680000000000001,
+      "source_train_acc": 0.01867816091954023,
+      "source_dev_mean": 0.0128,
+      "source_dev_worst": 0.0128,
+      "global_norm_init": 44.35959836573919,
+      "final_ckpt": "ckpts/reset_attn_final.pt"
+    },
+    "reset_mlp": {
+      "name": "reset_mlp",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "mlp"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.5976,
+      "final_dev_worst": 0.2864,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.5976,
+      "source_train_acc": 0.04741379310344827,
+      "source_dev_mean": 0.0064,
+      "source_dev_worst": 0.0064,
+      "global_norm_init": 46.625034184969074,
+      "final_ckpt": "ckpts/reset_mlp_final.pt"
+    },
+    "reset_unembed": {
+      "name": "reset_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "unembed"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.48,
+      "final_dev_worst": 0.1616,
+      "final_train_acc": 0.9610272988505747,
+      "best_dev_mean": 0.5168,
+      "source_train_acc": 0.01221264367816092,
+      "source_dev_mean": 0.008,
+      "source_dev_worst": 0.008,
+      "global_norm_init": 49.346747514191534,
+      "final_ckpt": "ckpts/reset_unembed_final.pt"
+    },
+    "keep_attn": {
+      "name": "keep_attn",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.2676,
+      "final_dev_worst": 0.096,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.2676,
+      "source_train_acc": 0.1939655172413793,
+      "source_dev_mean": 0.020399999999999998,
+      "source_dev_worst": 0.0192,
+      "global_norm_init": 51.99298107258458,
+      "final_ckpt": "ckpts/keep_attn_final.pt"
+    },
+    "keep_mlp": {
+      "name": "keep_mlp",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "mlp"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.046,
+      "final_dev_worst": 0.0272,
+      "final_train_acc": 0.9998204022988506,
+      "best_dev_mean": 0.0508,
+      "source_train_acc": 0.15660919540229884,
+      "source_dev_mean": 0.0192,
+      "source_dev_worst": 0.0192,
+      "global_norm_init": 78.50710375426335,
+      "final_ckpt": "ckpts/keep_mlp_final.pt"
+    },
+    "keep_unembed": {
+      "name": "keep_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "unembed"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.0156,
+      "final_dev_worst": 0.008,
+      "final_train_acc": 0.9942528735632183,
+      "best_dev_mean": 0.024,
+      "source_train_acc": 0.1932471264367816,
+      "source_dev_mean": 0.0304,
+      "source_dev_worst": 0.0304,
+      "global_norm_init": 88.03009509849242,
+      "final_ckpt": "ckpts/keep_unembed_final.pt"
+    },
+    "keep_attn_mlp": {
+      "name": "keep_attn_mlp",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn",
+        "mlp"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.7288000000000001,
+      "final_dev_worst": 0.4496,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.7288000000000001,
+      "source_train_acc": 0.15445402298850575,
+      "source_dev_mean": 0.0592,
+      "source_dev_worst": 0.0592,
+      "global_norm_init": 45.95069686448185,
+      "final_ckpt": "ckpts/keep_attn_mlp_final.pt"
+    },
+    "keep_mlp_unembed": {
+      "name": "keep_mlp_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "mlp",
+        "unembed"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.037599999999999995,
+      "final_dev_worst": 0.016,
+      "final_train_acc": 0.9998204022988506,
+      "best_dev_mean": 0.0516,
+      "source_train_acc": 0.18031609195402298,
+      "source_dev_mean": 0.0528,
+      "source_dev_worst": 0.0528,
+      "global_norm_init": 75.82894651665373,
+      "final_ckpt": "ckpts/keep_mlp_unembed_final.pt"
+    },
+    "keep_attn_unembed": {
+      "name": "keep_attn_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 7,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn",
+        "unembed"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.7687999999999999,
+      "final_dev_worst": 0.5952,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.7687999999999999,
+      "source_train_acc": 0.11206896551724138,
+      "source_dev_mean": 0.048,
+      "source_dev_worst": 0.048,
+      "global_norm_init": 47.52731664619706,
+      "final_ckpt": "ckpts/keep_attn_unembed_final.pt"
+    }
+  },
+  "finished": true
+}

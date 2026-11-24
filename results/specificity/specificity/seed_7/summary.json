@@ -1,0 +1,45 @@
+{
+  "seed": 7,
+  "device": "cuda",
+  "jobs": {
+    "source_copy_a": {
+      "name": "source_copy_a",
+      "kind": "specificity_source",
+      "task": "copy_a",
+      "seed": 7,
+      "source_task": "copy_a",
+      "status": "grokked",
+      "grok_step": 750,
+      "steps_run": 20000,
+      "elapsed_s": 82.17632555961609,
+      "done": true,
+      "transfer_done": true,
+      "final_dev_mean": 0.012,
+      "final_dev_worst": 0.008,
+      "final_train_acc": 1.0,
+      "source_train_acc": 0.012,
+      "source_dev_mean": null,
+      "final_ckpt": "ckpts/from_copy_a_final.pt"
+    },
+    "source_selector": {
+      "name": "source_selector",
+      "kind": "specificity_source",
+      "task": "selector",
+      "seed": 7,
+      "source_task": "selector",
+      "status": "grokked",
+      "grok_step": 1000,
+      "steps_run": 20000,
+      "elapsed_s": 163.14864349365234,
+      "done": true,
+      "transfer_done": true,
+      "final_dev_mean": 0.008799999999999999,
+      "final_dev_worst": 0.0016,
+      "final_train_acc": 1.0,
+      "source_train_acc": 0.008799999999999999,
+      "source_dev_mean": null,
+      "final_ckpt": "ckpts/from_selector_final.pt"
+    }
+  },
+  "finished": true
+}

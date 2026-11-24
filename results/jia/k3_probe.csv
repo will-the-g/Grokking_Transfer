@@ -1,0 +1,4 @@
+seed,grokked,grok_step,source_steps,status,torch_version,gpu_name
+5,no,,40000,nongrok,2.15.0+cu132,NVIDIA GeForce RTX 5090
+6,no,,40000,nongrok,2.15.0+cu132,NVIDIA GeForce RTX 5090
+7,no,,40000,nongrok,2.15.0+cu132,NVIDIA GeForce RTX 5090

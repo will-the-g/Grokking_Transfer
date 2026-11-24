@@ -1,0 +1,252 @@
+{
+  "seed": 8,
+  "device": "cuda",
+  "jobs": {
+    "reset_numeric_embed": {
+      "name": "reset_numeric_embed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "numeric_embed"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.023487261146496817,
+      "final_dev_worst": 0.009554140127388535,
+      "final_train_acc": 0.8744612068965517,
+      "best_dev_mean": 0.030652866242038217,
+      "source_train_acc": 0.016522988505747127,
+      "source_dev_mean": 0.022292993630573247,
+      "source_dev_worst": 0.022292993630573247,
+      "global_norm_init": 85.44389944632658,
+      "final_ckpt": "ckpts/reset_numeric_embed_final.pt"
+    },
+    "reset_other_embed": {
+      "name": "reset_other_embed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "other_embed"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.8443471337579618,
+      "final_dev_worst": 0.6512738853503185,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.8443471337579618,
+      "source_train_acc": 0.02622126436781609,
+      "source_dev_mean": 0.02667197452229299,
+      "source_dev_worst": 0.012738853503184714,
+      "global_norm_init": 44.708790411566326,
+      "final_ckpt": "ckpts/reset_other_embed_final.pt"
+    },
+    "reset_attn": {
+      "name": "reset_attn",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.8415605095541401,
+      "final_dev_worst": 0.697452229299363,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.8415605095541401,
+      "source_train_acc": 0.016522988505747127,
+      "source_dev_mean": 0.028662420382165606,
+      "source_dev_worst": 0.028662420382165606,
+      "global_norm_init": 43.754728667702125,
+      "final_ckpt": "ckpts/reset_attn_final.pt"
+    },
+    "reset_mlp": {
+      "name": "reset_mlp",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "mlp"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.749203821656051,
+      "final_dev_worst": 0.5015923566878981,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.749203821656051,
+      "source_train_acc": 0.029454022988505746,
+      "source_dev_mean": 0.03503184713375796,
+      "source_dev_worst": 0.03503184713375796,
+      "global_norm_init": 43.1786576668677,
+      "final_ckpt": "ckpts/reset_mlp_final.pt"
+    },
+    "reset_unembed": {
+      "name": "reset_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "unembed"
+      ],
+      "recipient": "grokked",
+      "donor": "fresh",
+      "final_dev_mean": 0.8455414012738853,
+      "final_dev_worst": 0.5875796178343949,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.8455414012738853,
+      "source_train_acc": 0.015804597701149427,
+      "source_dev_mean": 0.01592356687898089,
+      "source_dev_worst": 0.01592356687898089,
+      "global_norm_init": 41.648111379406,
+      "final_ckpt": "ckpts/reset_unembed_final.pt"
+    },
+    "keep_attn": {
+      "name": "keep_attn",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.6134554140127388,
+      "final_dev_worst": 0.36942675159235666,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.6134554140127388,
+      "source_train_acc": 0.28573994252873564,
+      "source_dev_mean": 0.06449044585987261,
+      "source_dev_worst": 0.06369426751592357,
+      "global_norm_init": 44.15005449381408,
+      "final_ckpt": "ckpts/keep_attn_final.pt"
+    },
+    "keep_mlp": {
+      "name": "keep_mlp",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "mlp"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.17436305732484078,
+      "final_dev_worst": 0.050955414012738856,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.1751592356687898,
+      "source_train_acc": 0.16810344827586207,
+      "source_dev_mean": 0.04777070063694268,
+      "source_dev_worst": 0.04777070063694268,
+      "global_norm_init": 56.145423688170816,
+      "final_ckpt": "ckpts/keep_mlp_final.pt"
+    },
+    "keep_unembed": {
+      "name": "keep_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "unembed"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.050159235668789805,
+      "final_dev_worst": 0.01592356687898089,
+      "final_train_acc": 0.9998204022988506,
+      "best_dev_mean": 0.05135350318471338,
+      "source_train_acc": 0.5466954022988506,
+      "source_dev_mean": 0.04777070063694268,
+      "source_dev_worst": 0.04777070063694268,
+      "global_norm_init": 75.45196065641983,
+      "final_ckpt": "ckpts/keep_unembed_final.pt"
+    },
+    "keep_attn_mlp": {
+      "name": "keep_attn_mlp",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn",
+        "mlp"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.7710987261146497,
+      "final_dev_worst": 0.4697452229299363,
+      "final_train_acc": 0.9594109195402298,
+      "best_dev_mean": 0.8399681528662419,
+      "source_train_acc": 0.11799568965517242,
+      "source_dev_mean": 0.08996815286624203,
+      "source_dev_worst": 0.08917197452229299,
+      "global_norm_init": 45.35992576070804,
+      "final_ckpt": "ckpts/keep_attn_mlp_final.pt"
+    },
+    "keep_mlp_unembed": {
+      "name": "keep_mlp_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "mlp",
+        "unembed"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.46735668789808915,
+      "final_dev_worst": 0.16560509554140126,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.46735668789808915,
+      "source_train_acc": 0.28448275862068967,
+      "source_dev_mean": 0.10987261146496816,
+      "source_dev_worst": 0.10987261146496816,
+      "global_norm_init": 53.4215049114041,
+      "final_ckpt": "ckpts/keep_mlp_unembed_final.pt"
+    },
+    "keep_attn_unembed": {
+      "name": "keep_attn_unembed",
+      "kind": "component",
+      "task": "affine",
+      "seed": 8,
+      "done": true,
+      "steps": 2000,
+      "components": [
+        "attn",
+        "unembed"
+      ],
+      "recipient": "memorized",
+      "donor": "grokked",
+      "final_dev_mean": 0.7603503184713375,
+      "final_dev_worst": 0.5477707006369427,
+      "final_train_acc": 1.0,
+      "best_dev_mean": 0.7603503184713375,
+      "source_train_acc": 0.2252155172413793,
+      "source_dev_mean": 0.12579617834394904,
+      "source_dev_worst": 0.12579617834394904,
+      "global_norm_init": 43.999110053977,
+      "final_ckpt": "ckpts/keep_attn_unembed_final.pt"
+    }
+  },
+  "finished": true
+}

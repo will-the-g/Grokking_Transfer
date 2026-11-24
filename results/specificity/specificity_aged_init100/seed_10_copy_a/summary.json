@@ -1,0 +1,98 @@
+{
+  "seed": 10,
+  "mask_seed": 10,
+  "config": {
+    "p": 59,
+    "n_contexts": 4,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512
+  },
+  "coverage": 0.4,
+  "split_seed": 1701,
+  "runtime": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 5090",
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "hostname": "484e314b80b8",
+    "python_version": "3.12.15",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39"
+  },
+  "deterministic": true,
+  "device": "cuda",
+  "status": "grokked",
+  "grok_step": 750,
+  "source_steps_run": 7000,
+  "source_elapsed_s": 83.71621799468994,
+  "jobs": {
+    "source_copy_a": {
+      "name": "source_copy_a",
+      "kind": "specificity_aged_source",
+      "task": "copy_a",
+      "seed": 10,
+      "source_task": "copy_a",
+      "status": "grokked",
+      "grok_step": 750,
+      "age_step": 7000,
+      "elapsed_s": 0.0001354217529296875,
+      "done": true,
+      "runtime": {
+        "device": "cuda",
+        "gpu_name": "NVIDIA GeForce RTX 5090",
+        "torch_version": "2.11.0+cu128",
+        "cuda_version": "12.8",
+        "hostname": "484e314b80b8",
+        "python_version": "3.12.15",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39"
+      },
+      "stages": {
+        "aged": {
+          "checkpoint": "age_matched.pt",
+          "source_step": 7000,
+          "source_train_acc": 1.0,
+          "source_dev_mean": 1.0,
+          "source_dev_worst": 1.0,
+          "source_global_norm": 62.840178230620474,
+          "final_dev_mean": 0.02014218009478673,
+          "final_dev_worst": 0.011058451816745656,
+          "final_train_acc": 0.8308189655172413,
+          "steps_to_30": null,
+          "final_ckpt": "ckpts/from_copy_a_aged_final.pt",
+          "runtime": {
+            "device": "cuda",
+            "gpu_name": "NVIDIA GeForce RTX 5090",
+            "torch_version": "2.11.0+cu128",
+            "cuda_version": "12.8",
+            "hostname": "484e314b80b8",
+            "python_version": "3.12.15",
+            "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39"
+          }
+        },
+        "grok": {
+          "checkpoint": "grokked.pt",
+          "source_step": 750,
+          "source_train_acc": 1.0,
+          "source_dev_mean": 1.0,
+          "source_dev_worst": 1.0,
+          "source_global_norm": 63.71388287105941,
+          "final_dev_mean": 0.01263823064770932,
+          "final_dev_worst": 0.007898894154818325,
+          "final_train_acc": 1.0,
+          "steps_to_30": null,
+          "final_ckpt": "ckpts/from_copy_a_grok_final.pt",
+          "runtime": {
+            "device": "cuda",
+            "gpu_name": "NVIDIA GeForce RTX 5090",
+            "torch_version": "2.11.0+cu128",
+            "cuda_version": "12.8",
+            "hostname": "484e314b80b8",
+            "python_version": "3.12.15",
+            "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39"
+          }
+        }
+      }
+    }
+  },
+  "age_step": 7000
+}
